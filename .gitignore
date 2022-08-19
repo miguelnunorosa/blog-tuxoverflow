@@ -3,3 +3,5 @@ _site
 .jekyll-metadata
 public/
 Gemfile.lock
+.idea/*
+.vscode/*
