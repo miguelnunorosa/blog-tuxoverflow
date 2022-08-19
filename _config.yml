@@ -7,7 +7,7 @@ permalink: ':title/'
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 baseurl: "/tux-overflow" # the subpath of your site, e.g. /blog
-url: "https://miguelnunorosa.github.io/tux-overflow" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://miguelnunorosa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 #site-twitter: #if your site has a twitter account, enter it here
 
