@@ -1,0 +1,110 @@
+I"�<p>Na diversidade que existe no mundo GNU/Linux, existem dois boot managers que nos lembramos logo: LILO e o GRUB. O <em>LILO</em> (<strong>LI</strong>nux <strong>LO</strong>ader) é um dos mais antigos (ou pelo menos na comparação entre estes dois) e vem por padrão em muitas distribuições. Com a evolução da tecnologia ainda foi desenvolvido uma versão do LILO para sistemas UEFI, contudo, o projeto LILO foi descontinuado em 2015. Contudo, o ELILO ainda é bastante usado e poder-se-á encontrar em algumas distribuições, como é o caso do Slackware.</p>
+
+<p>No outro lado, temos o GRUB (que significa <strong>GR</strong>and <strong>U</strong>nified <strong>B</strong>ootloader) que é um projeto sobe a alçada <em>GNU PROJECT</em>. Tal como o anterior, permite multiboot (iniciar vários sistemas operativos que estejam instalados no sistema) e é o mais utilizado nos dias de hoje. Sim, também permite a inicialização de sistemas UEFI e, uma das principais vantagens em relação ao anterior, o GRUB permite utilizar uma palavra passe para continuar o boot, ou seja, tem um factor de segurança adicional que o LILO não tem (ou pelo menos, e até à data da escrita deste artigo, eu desconheço - Irei pesquisar e se estiver errado, faço a correção).</p>
+
+<p>Partindo da frase “o Slackware é antigo” venho desmistificar esse mito ao mostrar que podemos ter no nosso sistema, tanto o ELILO (caso seja utilizado UEFI) como o GRUB, para isso basta seguir os passos abaixo. De salientar que os comandos aqui mostrados foram testados em várias máquinas com diferentes tipo de instalação e uso, no entanto recomendo, caso seja do seu interesse, a leitura à posterori das ações de cada comando.</p>
+
+<p><br /></p>
+
+<h2 id="instalação">Instalação</h2>
+
+<p>A instalação do GRUB no Slackware (neste teste irei utilizar a versão <em>current</em>) é bastante simples e pode ser feita em dois momentos distintos. Vamos então ver:</p>
+
+<h3 id="1-instalação-nova-do-sistema">1) Instalação nova do sistema</h3>
+
+<p>Caso pretenda instalar o GRUB em vez do ELILO, faça o seguinte: Durante a instalação, quando surgir a caixa de diálogo se pretende instalar o <em>LILO</em> selecione <em>skip</em></p>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/newinstall-01.png" alt="Screen01" /></p>
+
+<p>Aqui, novamente selecionar <em>skip</em> para o sistema não instalar o ELILO.</p>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/newinstall-02.png" alt="Screen02" /></p>
+
+<p>Depois é prosseguir com a instalação até ao final (até aparecer este screen)</p>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/newinstall-03.png" alt="Screen03" /></p>
+
+<p>aqui selecione a opção <em>Exit</em>, faça OK e, <strong>muito importante</strong> (é aqui o chamado <em>“pulo do gato”</em>) seleccione a primeira opção, <em>“Shell”</em>.</p>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/newinstall-04.png" alt="Screen04" /></p>
+
+<p>Agora sim, vamos instalar o GRUB no sistema. O primeiro passo é montar a partição <em>/mnt</em> como chroot:</p>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/newinstall-05.png" alt="Screen05" /></p>
+
+<p>Se não houver erro nenhum, este primeiro passo está dado. Agora iremos instalar o GRUB na partição de boot do sistema (geralmente (numa instalação padrão) é no <em>sda</em>, se não for o seu caso, reveja a sua tabela de partições com o comando <em><strong>df</strong></em> ). <em><strong>ATENÇÃO</strong> se se enganar neste passo compromete todo o seu sistema e acabará por reformatar o mesmo, não será grande problema visto ser uma instalação de raíz, no entanto, na próxima forma de instalar pode ser complicado</em>.</p>
+
+<p>O Comando para instalar é:</p>
+
+<blockquote>
+  <p>grub-install /dev/sda</p>
+</blockquote>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/newinstall-06.png" alt="Screen06" /></p>
+
+<p>Estamos já bem perto do final, basta apenas um comando! O próximo passo é gerar um ficheiro de configuração (geralmente com a extensão <em>.cfg</em>) para que o bootload possa “ler” e entender o que tem que fazer. Executemos o comando:</p>
+
+<blockquote>
+  <p>grub-mkconfig -o /boot/grub/grub.cfg</p>
+</blockquote>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/newinstall-07.png" alt="Screen07" /></p>
+
+<p>Neste comando, ao chamar o executável <em>grub-mkconfig</em> utilizamos o parametro <em>-o</em> (que significa <em>output</em>) para definir onde queremos guardar o ficheiro de configuração (neste caso fica na diretoria <em>/boot/grub</em>). Quando é executado, o sistema procura pelos Kernel existentes na máquina e adiciona-os de modo a ser opções de escolha quando o sistema iniciar. Após esta verificação, é gerado o ficheiro e armazenado na diretoria.</p>
+
+<p>Feito isto fazemos <em>exit</em> para sair do chroot e por fim, <em>reboot</em> para reiniciar a máquina. Feito!</p>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/newinstall-08.png" alt="Screen08" /></p>
+
+<p><br /></p>
+
+<h3 id="2-após-instalação-do-sistema">2) Após instalação do sistema</h3>
+
+<p>Substituir o ELILO (ou LILO caso seja um sistema sem UEFI) é relativamente simples. Para começar, quando o sistema terminar o boot e estiver pronto para fazer login com o seu utilizador, troque a interface gráfica pelo modo de texto através da combinação <strong>CTRL+ALT+F2</strong>. Quando pedir o login, faço-o como root</p>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/postinstall-01.png" alt="Screen09" /></p>
+
+<p>Após login, repetimos esta sequência de comandos que foram também utilizados pelo método anterior (<em>novamente deixar a mesma nota que é necessário (re)ver qual partição está o boot para não comprometer o sistema</em>):</p>
+
+<blockquote>
+  <p>grub-install /dev/sda</p>
+
+  <p>grub-mkconfig -o /boot/grub/grub.cfg</p>
+</blockquote>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/postinstall-02.png" alt="Screen10" /></p>
+
+<p>Grub instalado com sucesso! Mas ainda não está tudo! Para evitar problemas, vamos remover o (E)LILO que foi instalado durante a instalação do sistema. Para isso basta executar:</p>
+
+<blockquote>
+  <p>slackpkg remove lilo elilo</p>
+</blockquote>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/postinstall-03.png" alt="Screen11" /></p>
+
+<p>Confirmamos a nossa escolha e aguardamos que termine. O último passo é reiniciar e… Feito! O GRUB está instalado e pronto a ser utilizado.</p>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/grub-final.png" alt="Screen12" /></p>
+
+<p><br /><br /></p>
+
+<h2 id="atualizações">Atualizações</h2>
+
+<p>Após cada atualização do kernel, é necessário gerar um novo ficheiro de configuração do Grub, caso contrário o sistema não irá iniciar corretamente, fazendo com que tenha que realizar passos adicionais para voltar a ter o sistema a funcionarem pleno. Assim, por cada update, basta fazer o seguinte comando:</p>
+
+<blockquote>
+  <p>grub-mkconfig -o /boot/grub/grub.cfg</p>
+</blockquote>
+
+<p><img src="../assets/img/posts/2022-01-02-grub-no-slackware/grub-updates.png" alt="Screen13" /></p>
+
+<p>Se surgir a mensagem que pretende substituir o ficheiro existente, basta dizer que <em>sim</em> e o sistema trata do resto.</p>
+
+<p><br /></p>
+
+<h2 id="vídeo">Vídeo</h2>
+
+<p>Como diz o ditado “<em>uma imagem vale mais que mil palavras</em>”, abaixo deixo o vídeo deste post que coloquei no canal do youtube.</p>
+<video>
+</video>
+:ET

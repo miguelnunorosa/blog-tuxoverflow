@@ -1,0 +1,27 @@
+I"3<h1 id="hello-to-my-world">Hello (to my) World!</h1>
+<p>Depois de alguns anos parado na blogosfera e de muita ponderação (e algum apoio), eis que decidi voltar a escrever!
+O presente blog está muito longe dos sistemas utilizados anteriormente (blog no extinto <em>myopera</em> e <em>wordpress</em>), uma vez que deixei de utilizar sistemas complexos utilizando base de dados remotas, configurações super-hiper-mega complicadas.</p>
+
+<p>Assim, o presente cantinho conta com a minha visão/opinião sobre os temas apresentados, partilhando também vários guias e/ou tutoriais, artigos esses que podem (ou não) surgir em formato vídeo no meu canal do youtube (basta clicar no icon no canto inferior esquerdo).</p>
+
+<p><br /></p>
+
+<h3 id="porquê-tux-overflow">Porquê <strong><em>Tux Overflow</em></strong>?</h3>
+<p>O título é uma junção de dois mundos que gosto e que, de certa forma, estão interligados: Linux e Programação.</p>
+
+<p>Linux (ou a sua mascote, o <em>Tux</em>) é o sistema operativo que uso desde há alguns anos (primeiro contacto foi em 2002 - se não estou em erro), utilizando-o em todas as minhas máquinas. Já passei por muitas distribuições, algumas delas participei ativamente na tradução de documentação, outras fui meramente um utilizador. As que mais usei foram OpenSuSE, Slackware e Ubuntu (estou a usar este último).</p>
+
+<p>Já no que toca à programação, o termo <em>overflow</em> vem quando é utilizado/incrementado um valor a uma pilha de memória e esta, por consequente “rebenta” provocando um erro de overflow (excesso de informação). Como o conhecimento não tem limite, é complicado chegar a um overflow, pelo que achei interessante a junção dos nomes (Tux + Overflow) e assim dar início não só ao nome do projeto como também a esta caminhada.</p>
+
+<p><br /></p>
+
+<h3 id="pronto-ok-e-que-mais">Pronto ok, e que mais?</h3>
+<p>Sou um curioso e apaixonado por tecnologia desde muito cedo, fazendo com que esse fosse o meu percurso profissional, a área da Informática. Sou utilizador, adepto/defensor do FOSS (<strong>F</strong>ree <strong>O</strong>pen <strong>S</strong>ource <strong>S</strong>oftware) quer a nível de Sistema Operativo, quer a nível de ferramentas que uso no dia a dia. Sou membro associado da ANSOL (<strong>A</strong>ssociação <strong>N</strong>acional para o <strong>So</strong>ftware <strong>L</strong>ivre) que é uma associação sem fins lucrativos que tem como principais objetivos a divulgação, promoção, desenvolvimento, investigação e estudo da informática livre a nivel nacional (Portugal).</p>
+
+<p>A nível de hardware, sou curioso e entusiasta do IoT (<strong>I</strong>nternet <strong>o</strong>f <strong>T</strong>hings - Internet das Coisas) das plataformas Arduino e Raspberry Pi. Realizei alguns projectos em ambas, sendo o mais ambicioso é tornar a minha casa numa Smart Home. Irei lá chegar!</p>
+
+<p>E a nível de desenvolvimento? Pois bem, a esse nível gosto do desenvolvimento mobile (quer de forma nativa, na linguagem programação Java, quer em cross-platform, em Flutter + Dart), estando a aprender desenvolvimento web (back/front-end) e Salesforce. Alguns dos meus projectos estão disponíveis no meu portfólio e têm o código fonte no Github.</p>
+
+<p><br />
+Após esta breve apresentação, espero vê-lo mais vezes neste canto virtual.</p>
+:ET
