@@ -1,0 +1,42 @@
+title: 'Tux Overflow'
+description: > # this means to ignore newlines until "baseurl:"
+  Blog pessoal sobre Linux, Open Source, Free Software e afins!
+permalink: ':title/'
+
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+baseurl: "/tux-overflow" # the subpath of your site, e.g. /blog
+url: "https://miguelnunorosa.gitlab.io/tux-overflow" # the base hostname & protocol for your site, e.g. http://example.com
+
+#site-twitter: #if your site has a twitter account, enter it here
+
+# Author Settings
+author: Tux Overflow # add your name
+author-img: struct/avatar.png # add your photo
+about-author: Blog pessoal. # add description
+social-twitter: MacgyverPT # add your Twitter handle
+#social-facebook: # add your Facebook handle
+social-gitlab: miguelnunorosa # add your Github handle
+social-linkedin: miguel-nuno-rosa-77075716b # add your Linkedin handle
+social-youtube: channel/UC3WfNiNqQxGfiRnf2znRldQ #blog youtube channel
+social-email: 'miguelrosa.programacao@gmail.com' # add your Email address
+
+# Disqus
+discus-identifier: tux-overflow # add your discus identifier
+comments: true
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
