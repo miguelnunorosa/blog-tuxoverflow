@@ -8,7 +8,7 @@ future: true
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 baseurl: "/blog-tuxoverflow" # the subpath of your site, e.g. /blog
-url: "https://miguelnunorosa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://miguelnunorosa.github.io/blog-tuxoverflow" # the base hostname & protocol for your site, e.g. http://example.com
 
 #site-twitter: #if your site has a twitter account, enter it here
 
