@@ -2,6 +2,7 @@ title: 'Tux Overflow'
 description: > # this means to ignore newlines until "baseurl:"
   Blog pessoal sobre Linux, Open Source, Free Software e afins!
 permalink: ':title/'
+future: true
 
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
