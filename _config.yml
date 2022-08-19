@@ -7,7 +7,7 @@ future: true
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-baseurl: "/tux-overflow" # the subpath of your site, e.g. /blog
+baseurl: "/blog-tuxoverflow" # the subpath of your site, e.g. /blog
 url: "https://miguelnunorosa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 #site-twitter: #if your site has a twitter account, enter it here
