@@ -7,7 +7,7 @@ permalink: ':title/'
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 baseurl: "/tux-overflow" # the subpath of your site, e.g. /blog
-url: "https://miguelnunorosa.gitlab.io/tux-overflow" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://miguelnunorosa.github.io/tux-overflow" # the base hostname & protocol for your site, e.g. http://example.com
 
 #site-twitter: #if your site has a twitter account, enter it here
 
@@ -17,7 +17,7 @@ author-img: struct/avatar.png # add your photo
 about-author: Blog pessoal. # add description
 social-twitter: MacgyverPT # add your Twitter handle
 #social-facebook: # add your Facebook handle
-social-gitlab: miguelnunorosa # add your Github handle
+social-github: miguelnunorosa # add your Github handle
 social-linkedin: miguel-nuno-rosa-77075716b # add your Linkedin handle
 social-youtube: channel/UC3WfNiNqQxGfiRnf2znRldQ #blog youtube channel
 social-email: 'miguelrosa.programacao@gmail.com' # add your Email address
