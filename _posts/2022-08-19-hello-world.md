@@ -33,5 +33,7 @@ Sou um curioso e apaixonado por tecnologia desde muito cedo, fazendo com que ess
 
 A nível de hardware, sou curioso e entusiasta do IoT (**I**nternet **o**f **T**hings - Internet das Coisas) das plataformas Arduino e Raspberry Pi. Realizei alguns projectos em ambas, sendo o mais ambicioso é tornar a minha casa numa Smart Home. Irei lá chegar!
 
+E a nível de desenvolvimento? Pois bem, a esse nível gosto do desenvolvimento mobile (quer de forma nativa, na linguagem programação Java, quer em cross-platform, em Flutter + Dart), estando a aprender desenvolvimento web (back/front-end) e Salesforce. Alguns dos meus projectos estão disponíveis no meu portfólio e têm o código fonte no Github.
+
 <br>
 Após esta breve apresentação, espero vê-lo mais vezes neste canto virtual.
