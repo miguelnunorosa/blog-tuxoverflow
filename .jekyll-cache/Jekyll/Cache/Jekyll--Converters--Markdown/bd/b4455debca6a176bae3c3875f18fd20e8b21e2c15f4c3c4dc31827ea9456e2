@@ -1,0 +1,109 @@
+I"f$<h1 id="somewhere-in-time">Somewhere in Time…</h1>
+<p>Após seguir uns quantos blogs sobre tecnologia (com alguma ênfase ao Linux) e outros tantos canais no youtube, surgiu a ideia de iniciar uma rúbrica aqui no cantinho denominado de “<em>Somewhere in Time…</em>” onde pretendo revisitar algumas distribuições que, por algum motivo, acabaram por não ser mais mantidas e o projeto acabando por ser descontinuado.</p>
+
+<p>Na impossibilidade de testar em máquina física, irei fazer uma instalação em máquina virtual, não só para (re)ver todo o processo de instalação, como também para ver as ferramentas e definições do sistema.</p>
+
+<p><br /></p>
+
+<h2 id="alinex">Alinex</h2>
+<p>No post de hoje trago uma distribuição portuguesa desenvolvida em parceria entre a Universidade de Évora e a Junta da Extremadura (Espanha). Segundo a equipa de desenvolvimento, a “versão desktop do Alinex foi desenvolvida a pensar nas necessidades dos utilizadores comuns”, ou seja, uma distribuição que podia ser usada tanto a nível empresarial como a nível doméstico (seja ele em desktop ou portátil).</p>
+
+<p>A distribuição foi criada em 2005 através de um protocolo entre a Universidade de Évora e a Junta da Extremadura (Espanha), sendo a versão inicial derivada de uma distribuição da Extremadura Espanhola (por sua vez era derivada de Debian). A partir da versão 2, foi então baseada no Ubuntu. Como ambas as regiões são próximas, o logotipo (ou poder-se-á chamar a mascote) é um animal bastante característico da região, a ovelha!</p>
+
+<p>Tal como foi referido, o <strong>Alinex</strong> visava vários públicos, nomeadamente PME (Pequenas e Médias Empresas), sector público (Administração Pública), sector educativo (como escolas (de todos os ensinos, desde o básico ao universitário - não fosse esta uma distribuição desenvolvida por uma Universidade), bibliotecas), utilizador comum e até à indústria (seja ela de que ramo for).</p>
+
+<p>O <strong>Alinex</strong> tem a sua última release datada de 25 Fevereiro de 2010, com a build <em>3.9.10</em>. Contudo, na minha pesquisa pela ‘internet’ fora, só consegui encontrar a versão 2.0 para download, versão essa que irei testar já a seguir.</p>
+
+<p><br /></p>
+
+<h2 id="instalação">Instalação</h2>
+<p>Após o arranque do CD (neste caso da imagem <em>.iso</em> na máquina virtual), o menu ainda é bastante comum nos dias de hoje, onde se permite inicializar o instalador da distribuição, iniciar o modo de LiveCD (experimentar sem instalar no computador), executar a ferramenta <em>MemTest</em> (permite fazer um teste às memórias RAM) e por fim, iniciar o computador pelo sistema operativo instalado no disco rígido.</p>
+
+<p><img src="../assets/img/posts/2022-08-20-somewhere-in-time-alinex/screen01.png" alt="Screen01" /></p>
+
+<p>Neste caso, embora a imagem indique o contrário, escolhi a primeira opção para iniciar o Alinex em LiveCD.</p>
+
+<p>O boot é até bastante rápido e “<em>clean</em>” o que faz com que, mesmo em computadores modestos, esta distribuição era para ter em conta e uma opção bastante válida. Após o carregamento do boot, eis que surge o ecrã principal:
+<img src="../assets/img/posts/2022-08-20-somewhere-in-time-alinex/screen02.png" alt="Screen01" /></p>
+
+<p>Não posso deixar uma nota em relação à resolução de ecrã. Tentei aumentar a mesma, mas o qemu (ferramenta que usei para virtualizar o sistema para este post) não me deixou alterar, ficando com uma resolução bastante baixa na ordem dos 640x480 (ou algo muito idêntico).</p>
+
+<p>Sem mais, segue algumas imagens do instalador:
+<img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen04.png" alt="Instalador" width="940" /></p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen05.png" alt="Instalador" width="940" /></p>
+
+<p>A própria instalação também é bastante rápida, simples e directa, tal como era a instalação do Debian 5 (talvez traga numa das próximas crónicas). Bem perto do fim da instalação a mesma parou quando tentava aceder à internet para descarregar packages da distribuição. Por momentos até pensei que ainda fosse possível (sonhar não custa), mas rápidamente percebi que ou clicava no botão de ignorar para continuar a instalação, ou ficava ali parado.</p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen06.png" alt="Instalador" width="940" /></p>
+
+<p>Findo este impasse, a instalação fica concluída e podemos optar entre dois caminhos:</p>
+<ul>
+  <li>Ou continuamos a explorar o LiveCD</li>
+  <li>Ou reiniciamos a máquina e vamos utilizar o sistema acabado de instalar</li>
+</ul>
+
+<p>Com estas duas opções a escolha mais óbvia foi a segunda. Vamos reniciar e já continuamos!</p>
+
+<p><br /></p>
+
+<h2 id="instalação-feita-e-agora">Instalação feita. E agora?</h2>
+<p>Instalação concluída, reboot feito, vamos então explorar o sistema! Para começar, vamos ver tão antigo é o kernel do sistema:</p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen03.png" alt="Versão Kernel" width="940" /></p>
+
+<p>Versão <em>2.6.x</em>, bem antigo! Vamos então passar ao software instalado:</p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen07.png" alt="Versão Gnome" width="940" /></p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen08.png" alt="Versão Firefox" width="940" /></p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen09.png" alt="Firefox" width="940" /></p>
+
+<p>Como era de se esperar, o firefox consegue aceder ao blog, mas… Fica completamente desconfigurado! Ao menos a internet funciona (e a placa de rede igual).</p>
+
+<p>Por falar em rede, vamos ver se conseguimos aceder à actualziação do sistema:</p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen10.png" alt="Updates" width="940" /></p>
+
+<p>Bom sinal! Temos updates! Será que instala? Vamos ver…</p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen11.png" alt="Updates" width="940" /></p>
+
+<p>E… Nada! Já era previsto, mas mesmo assim, nada como tentar!</p>
+
+<p>Mas pronto, vamos continuar:</p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen12.png" alt="Software" width="940" /></p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen13.png" alt="Software" width="940" /></p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen14.png" alt="Software" width="940" /></p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen15.png" alt="Software" width="940" /></p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen16.png" alt="Software" width="940" /></p>
+
+<p><img src="../assets/img/posts/2021/SomewhereTimeAlinex/screen17.png" alt="Software" width="940" /></p>
+
+<p>Como podemos ver, o Alinex vinha com um bom equilibrio, não vinha sem software, e também não vinha com software em abundância, podemos dizer que tinha um (e excelente) software para cada tarefa que o utilizador fosse realizar.</p>
+
+<p>Tal como no exemplo do Firefox, todas as versões apresentadas datam de 2007, logo o aspecto visual das mesmas era meio… tosco! Contudo, como o Linux é bastante personalizável (e já o era neste tempo) e isso permitia uma panóplia de configurações tornando o sistema único, bem de acordo com os gostos pessoais do utilizador.</p>
+
+<p>Os comandos de sistema, como ver memória utilizada, espaço ocupado, gestão de utilizadores, permissões a ficheiros e pastas (e demais comandos) são precisamente os mesmos.</p>
+
+<p><br /> <br /></p>
+
+<h2 id="conclusões">Conclusões</h2>
+<p>Tal como seria expectável, muitas memórias vieram “ao de cima” após a instalação do <strong>Alinex</strong>. Remeteu-me para os tempos em que a internet ainda era meio escassa e que a informação era fornecida através de foruns da comunidade, por outros utilizadores que, por sinal, eram alunos (ou até mesmo professores) da Universidade de Évora e por artigos escritos em blogs e revistas da especialidade.</p>
+
+<p>A par destas memórias, todo este sistema (nos dias de hoje) mostra um Gnome, ainda que na sua versão 2, na sua plenitude, com as suas cores características (e quiçã até os bugs). O instalador é ligeiramente diferente do instalador actual do Debian (algumas secções mudaram, outras apenas sofreram ajustes ou visuais ou em termos de acessibilidade).</p>
+
+<p>Vem com algum software instalado por default, bastante comum na época, uma vez que a internet ADSL ainda estava a começar a sua caminhada por velocidades mais altas. O sistema, tal como foi referido, acusa updates, mas como era de se esperar, após tantos anos, os servidores já não estão activos.</p>
+
+<p>Os testes foram feitos numa máquina virtual pelo que o desempenho pode não corresponder 100% ao real, isto é, a distribuição quando instalada numa máquina física, o desempenho é ajustado às características da mesma, logo a fluídez é outra e a experiência de se utilizar é alterada… Para melhor.</p>
+
+<p><br /></p>
+
+<p>Nos próximos dias irei disponibilizar o vídeo da review desta distribuição, desde a instalação até ao último reboot, passando pelos vários softwares instalados. Não percam o próximo capítulo!</p>
+:ET
